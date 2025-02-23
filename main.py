@@ -1,8 +1,11 @@
 from stats import count_words
-
+import sys
 
 def main():
-    path_to_file = 'books/frankenstein.txt'
+    if len(sys.argv) < 2:
+        print('Please provide a path to a file. Usage: python3 main.py <path_to_book>')
+        sys.exit(1)
+    path_to_file = sys.argv[1]
     text = get_text(path_to_file)
     num_words = count_words(text)
     chars = count_characters(text)
