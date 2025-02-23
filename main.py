@@ -39,7 +39,7 @@ def chars_dict_to_sorted_list(chars):
 
 def make_report(path, num_words, chars_list):
     print(f'--- Begin report of {path} ---')
-    print(f'Words found in the document: {num_words}')
+    print(f'{num_words} words found in the document')
     print('')
     for char in chars_list:
         character = char['char']
